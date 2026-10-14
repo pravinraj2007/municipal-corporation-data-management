@@ -1,25 +1,54 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# AI-Powered Complaint Management Application
 
-# Run and deploy your AI Studio app
+## Overview
 
-This contains everything you need to run your app locally.
+This application helps users submit complaints with supporting camera photos and location information. It integrates Google Gemini for AI-powered assistance and Google Maps Platform for location-related functionality.
 
-View your app in AI Studio: https://ai.studio/apps/bdbe5719-0d85-4a20-a223-790818a3bc7e
+## Technologies Used
 
-## Run Locally
+* **Google Gemini API:** AI-powered assistance.
+* **Google Maps Platform API:** Map and location functionality.
+* **Camera and Geolocation APIs:** Capture complaint evidence and its location.
+* **Node.js and npm:** Local development environment.
 
-**Prerequisites:**  Node.js
+## Prerequisites
 
+* Node.js and npm
+* Gemini API key
+* Google Maps Platform API key
 
-1. Install dependencies:
-   `npm install`
-2. Copy `.env.example` to `.env.local` and set `GEMINI_API_KEY` and `GOOGLE_MAPS_PLATFORM_KEY` to your own API keys. `.env.local` is ignored by Git.
-3. Run the app:
-   `npm run dev`
+## Installation
 
-Complaint submissions require a live camera photo and location permission. The photo is stamped with its capture coordinates and time. Camera and location access work on `localhost` or when the app is served over HTTPS.
+1. Clone the repository.
 
-api used -> (google map plat form )api key have been useed 
-gemenai asst -> gemiai api key 
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create `.env.local` using `.env.example`.
+
+4. Configure your API keys.
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+## Privacy and Security
+
+* Do not commit API keys or other secrets.
+* Restrict Google Maps API keys to the required APIs and websites.
+* Keep the Gemini API key on the server in production.
+* Request camera and location permissions only when needed.
+* Handle complaint photos and location data responsibly.
+
+## Camera and Location Requirements
+
+Complaint submission requires camera and location permissions. These browser features generally require localhost or an HTTPS connection.
+
+## Pull Request
+
+Please describe the changes, testing performed, and any relevant screenshots when submitting a pull request.
